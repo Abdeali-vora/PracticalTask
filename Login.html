@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Login Page</title>
+
+	<!---Bootstrap-4 Links------>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<!-- Css Link ---->
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div class="container">
+	<div class='login'>
+        <div class='login__container mt-5'>
+            <h2 style="text-align: center">Log-in</h2>
+			<form >
+                <br/>
+                <h6 style="color: grey">Username:</h6>
+                <input type='text' 
+                       name="email" 
+                       class="form-control me-2" 
+                       required="required" 
+                       style="border-radius: '5px'; height: 40px">
+               	<br/>
+               	<h6 style="color: grey">Password:</h6>
+                <input type='password' 
+                       name="password"
+                       id="password" 
+                       class="form-control me-2" 
+                       required="required" 
+                       style="border-radius: 5px;height: 40px">
+				<br/>
+                <button 
+                       type='submit'  
+        	            style="
+                           border-radius: 5px;
+                           border-color:#F4B600;
+                           background-color: #F4B600;
+                           color: white;
+                        ">
+                        Log In</button>
+                </form>
+                <br/>
+                <h6>Don't have account ?</h6>
+                <a 
+                    href="Register.html" 
+                    class='login__registerButton' 
+                    style="
+                            margin-top:5px;
+                            font-size: 15px;
+                            border-radius: 5px;
+                            text-decoration:none; 
+                            text-align: center;
+                            background-color: #F4B600,
+                            color:white;
+                            padding-top:2px;
+                        ">
+                    Create your Account
+                </a>
+            </div>
+        </div>
+</div>
+
+<!---Bootstrap-4 Links------>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Register Page</title>
+
+	<!---Bootstrap-4 Links------>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Css Link ---->
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class='login'>
+        <div class='login__container mt-4'>
+            <h2 style="text-align: center">Create Account</h2>
+            <form>
+                <br/>
+                <h6 style="color: grey">Username:</h6>
+                <input type='text' 
+                    name="name" 
+                    class="form-control me-2" 
+                    required="required" 
+                    style="border-radius: 5px;height: 40px">
+                <br/>
+                <h6 style="color: grey">E-mail:</h6>
+                <input type='email' 
+                    name='email' 
+                    class="form-control me-2" 
+                    required="required" 
+                    style="border-radius: 5px;height: 40px">
+                <br/>
+                <h6 style="color: grey">Password:</h6>
+                <input type='password' 
+                    name='password' 
+                    class="form-control me-2" 
+                    required="required" 
+                    style="border-radius: 5px;height: 40px">
+                <br/> 
+                <h6 style="color: grey">Confirm-Password:</h6>
+                <input type='password' 
+                    name="password2" 
+                    class="form-control me-2" 
+                    required="required" 
+                    style="border-radius: 5px;height: 40px">
+                <br/>
+                <h6 style="color: grey">Enter Captcha:</h6>
+                <input class="form-control me-2" type="text" id="input_val" />
+                <p id="operation"><span id="num1">1</span> + <span id="num2">20</span></p>
+                <button id="btn">Submit</button>
+                <br/>
+                <button id="btn" class='login__registerButton' type='submit'>
+                    Create Account
+                </button>
+                <br/>
+            </form>
+            <br/>
+            <div>
+                Already Have Account ?
+                <a href="Login.html" style="text-decoration:none">  
+                            Log in
+                </a>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+<script>
+        let input_val = document.getElementById("input_val");
+
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+
+        const mybtn = document.getElementById("btn");
+
+        num1.innerText = Math.floor(Math.random() * 10);
+        num2.innerText = Math.floor(Math.random() * 10);
+
+        let number1 = num1.innerText;
+        let number2 = num2.innerText;
+
+
+        mybtn.addEventListener("click", () => {
+      
+            let sum_result = parseInt(number1) + parseInt(number2);
+
+            let res = parseInt(input_val.value);
+
+            if (res == sum_result) {
+                alert("correct Capcha!!");
+            } 
+            else {
+                alert("Incorrect Capcha!!");
+            }
+        });
+</script> 
+
+<!---Bootstrap-4 Links------>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
